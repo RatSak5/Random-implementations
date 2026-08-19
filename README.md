@@ -54,6 +54,7 @@ These are the first ten words.
 | Context size             | 10       |
 | Embedding size           | 10       |
 | Hidden layer size        | 300      |
+| Temperature        | 1.5      |
  
 ## Structure
  
@@ -115,6 +116,9 @@ We can also add a `temperature` factor to the generation process which essential
 <img width="560" height="294" alt="image" src="https://github.com/user-attachments/assets/77d33e8b-a628-43e8-adb8-bc023e4eb9da" />
 
 We divide each weight by the temperature before passing it into softmax.
+
+#### Note
+Increasing it too much worsens the results so there is a sweet spot around `1.5`.
  
 ### A Catch
  
