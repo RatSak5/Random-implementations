@@ -109,6 +109,12 @@ To generate a word, the model is given the initial sequence of `.` characters as
 This process repeats in a loop, feeding each new character back into the context, until the predicted character is `.` — at which point the loop ends and the completed word is added to the output list.
  
 This procedure shows some degree of "memory" as about 26% of generated words already exist in the original dataset. Models with less memorization are possible, but word quality tends to degrade as memorization decreases. There seems to be a sweet spot between memorization and genuine novelty in the generated words.
+
+We can also add a `temperature` factor to the generation process which essentially "randomizes" the generation a bit and causes an increase in the percentage of new words produced while more or less maintaining that the words sound like names.
+
+<img width="560" height="294" alt="image" src="https://github.com/user-attachments/assets/77d33e8b-a628-43e8-adb8-bc023e4eb9da" />
+
+We divide each weight by the temperature before passing it into softmax.
  
 ### A Catch
  
